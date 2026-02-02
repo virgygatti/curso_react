@@ -1,0 +1,8 @@
+.item-list-container__greeting {
+  background: var(--bs-light, #f8f9fa);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.item-list-container__greeting h2 {
+  color: var(--bs-primary);
+}

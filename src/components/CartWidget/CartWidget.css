@@ -1,0 +1,11 @@
+.cart-widget {
+  cursor: pointer;
+}
+
+.cart-widget__icon {
+  color: inherit;
+}
+
+.cart-widget .badge {
+  font-size: 0.75rem;
+}

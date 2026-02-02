@@ -1,0 +1,25 @@
+.navbar {
+  width: 100%;
+  max-width: 100vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar > .container-fluid {
+  max-width: 100%;
+}
+
+.navbar .nav-link.btn {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border: none;
+}
+
+.navbar .nav-link.btn:hover,
+.navbar .nav-link.btn.active {
+  color: #fff;
+}
+
+.navbar .nav-link.btn:focus {
+  box-shadow: none;
+}
