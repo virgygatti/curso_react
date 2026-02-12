@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 
@@ -9,19 +9,14 @@ const categorias = [
 ]
 
 function NavBar() {
-  const [categoriaActiva, setCategoriaActiva] = useState(null)
-
-  const handleClickCategoria = (id) => {
-    setCategoriaActiva(id)
-    // En PreEntrega 2 aquí irá la navegación con react-router
-  }
+  const { categoryId } = useParams()
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
-        <a className="navbar-brand fw-bold" href="/">
+        <Link className="navbar-brand fw-bold" to="/">
           Mi Tienda
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -37,13 +32,12 @@ function NavBar() {
           <ul className="navbar-nav me-auto">
             {categorias.map((cat) => (
               <li className="nav-item" key={cat.id}>
-                <button
-                  type="button"
-                  className={`nav-link btn btn-link ${categoriaActiva === cat.id ? 'active fw-bold' : ''}`}
-                  onClick={() => handleClickCategoria(cat.id)}
+                <Link
+                  className={`nav-link ${categoryId === cat.id ? 'active fw-bold' : ''}`}
+                  to={`/category/${cat.id}`}
                 >
                   {cat.nombre}
-                </button>
+                </Link>
               </li>
             ))}
           </ul>

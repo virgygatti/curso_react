@@ -1,0 +1,8 @@
+.item__img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.item .card-body {
+  min-height: 0;
+}
