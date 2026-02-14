@@ -1,0 +1,3 @@
+.item-quantity-selector .btn.disabled {
+  pointer-events: none;
+}

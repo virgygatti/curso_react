@@ -5,7 +5,7 @@ import './NavBar.css'
 const categorias = [
   { id: 'electronica', nombre: 'Electrónica' },
   { id: 'libros', nombre: 'Libros' },
-  { id: 'vehiculos', nombre: 'Vehículos' },
+  { id: 'hogar', nombre: 'Hogar' },
 ]
 
 function NavBar() {

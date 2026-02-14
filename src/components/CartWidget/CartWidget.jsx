@@ -1,14 +1,19 @@
+import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
+import { useCart } from '../../context/CartContext'
 import './CartWidget.css'
 
 function CartWidget() {
-  const cantidad = 3 // número hardcodeado para PreEntrega 1
+  const { getTotalQuantity } = useCart()
+  const total = getTotalQuantity()
 
   return (
-    <div className="cart-widget d-flex align-items-center gap-1">
+    <Link to="/cart" className="cart-widget d-flex align-items-center gap-1 text-decoration-none text-white">
       <FaShoppingCart className="cart-widget__icon" size={24} />
-      <span className="badge bg-danger rounded-pill">{cantidad}</span>
-    </div>
+      {total > 0 && (
+        <span className="badge bg-danger rounded-pill">{total}</span>
+      )}
+    </Link>
   )
 }
 
